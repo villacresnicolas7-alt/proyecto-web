@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Arquitectura: Servidor y Hardware</title>
+    <style>
+        body {
+            background-color: #121c2c; 
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+
+            background-image: url("circuitoxd.png");
+            background-size: cover;       
+            background-position: center;  
+            background-repeat: no-repeat; 
+            background-attachment: fixed;  
+        }
+
+        /* Animación de color y zoom para los h1 */
+        h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: colorChangeH1 4s infinite alternate, scaleH1 4s infinite alternate;
+        }
+
+        @keyframes colorChangeH1 {
+            0%   { color: #ff0000; }
+            25%  { color: #00ff00; }
+            50%  { color: #00ffff; }
+            75%  { color: #ff00ff; }
+            100% { color: #ffff00; }
+        }
+
+        @keyframes scaleH1 {
+            0%   { transform: scale(1); }
+            50%  { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Animación de color para los h2 */
+        h2 {
+            font-size: 1.5em;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+            text-align: left;
+            animation: colorChangeH2 6s infinite alternate;
+        }
+
+        @keyframes colorChangeH2 {
+            0%   { color: #ffd700; }
+            25%  { color: #00ffff; }
+            50%  { color: #ff69b4; }
+            75%  { color: #7fff00; }
+            100% { color: #ff4500; }
+        }
+
+        .card {
+            background-color: #23344d; 
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 900px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            border: 1px solid #4a648b; 
+            text-align: left;
+        }
+        
+        .card p, .card ul, .card ol {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .card b {
+            color: #add8e6; 
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border-radius: 4px;
+            display: block;
+        }
+
+        a {
+            color: #ffd700; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #add8e6;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+            padding-bottom: 5px;
+        }
+        
+        code {
+            display: block;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Proyecto de Arquitectura: Servidor y Hardware</h1>
+
+    <div class="card">
+        <h2>Sección de ejemplo</h2>
+        <p>Bienvenido a nuestra pagina web</p>
+    </div>
+    
+    <h1>Servidor y Hardware </h1>
+
+    <div class="card">
+        <h2>Local Host</h2>
+        
+        <p>
+            Para cumplir con el requisito de acceder a la página mediante la dirección <b>127.0.0.1</b> (o localhost), se utilizó el módulo integrado de servidor HTTP de <b>Python</b>. Este método es ligero, rápido y no requiere la instalación de software adicional como XAMPP o WAMP. Se abrió el Explorador de Archivos y se copió la dirección completa de la carpeta que contenía el proyecto (ejemplo: <b>C:\Users\TuUsuario\Documents\Proyecto web</b>).
+        </p>
+        <img src="i1.PNG" alt="i1">
+        <img src="i2.PNG" alt="i2">
+        
+        <p>Se abrió el Símbolo del sistema (cmd) mediante la combinación de teclas Windows + R.</p>
+        <img src="i3.PNG" alt="i3">
+        
+        <p>Se ejecutó el comando <b>cd</b> seguido de la ruta copiada (ejemplo: <code>cd C:\Users\TuUsuario\Documents\Proyecto web</code>).</p>
+        <img src="i4.PNG" alt="i4">
+        
+        <p>Una vez que la Terminal estuvo posicionada en la carpeta del proyecto, se ejecutó el siguiente comando para iniciar el servidor HTTP en el puerto 8000: <code>python -m http.server 8000</code></p>
+        <img src="i5.PNG" alt="i5">
+
+        <p>Y ya estaría finalizada.</p>
+        <img src="i6.PNG" alt="i6">
+        
+        <p>Tras ejecutar el comando, el servidor se activó. Finalmente, se accedió a la página web a través de cualquiera de las siguientes direcciones en el navegador, cumpliendo con el requisito de usar la dirección local: <b><a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a></b></p>
+    </div>
+
+    <div class="card">
+        <h2>UEFI</h2>
+
+        <p>Prenderemos la computadora o la más común es reiniciar la computadora ya iniciada.</p>
+        <img src="i7.PNG" alt="i7">
+        
+        <p>
+            Cuando aparezca el logo de la marca de la computadora (DELL) presionamos repetidas veces la tecla <b>F2</b> o también dejarla presionada, aparece una barra de carga en el inferior que indicara que estamos accediendo a la BIOS y un mensaje en la parte superior derecha “Preparing to enter BIOS setup” otro indicativo de que estamos entrando a la BIOS.
+        </p>
+        <img src="i8.PNG" alt="i8">
+        
+        <p>
+            Una vez hecho esto donde podemos observar una versión mas avanzada de la BIOS conocido como <b>UEFI</b>, el cual contiene un distintivo color blanco y celeste además de las múltiples opciones para modificar ciertas configuraciones para poder habilitar el uso de correcto de aplicaciones o deshabilitar cosas que no usemos o creamos no tan relevantes.
+        </p>
+        <img src="i9.PNG" alt="i9">
+        
+        <p>
+            <b>-Secure Boot:</b> También conocido como arranque seguro, es un modo implementado en el firmware UEFI de Windows desde Windows 8, este impide la ejecución de cualquier software no firmado o certificado en el arranque del sistema. Esto no ayuda a evitar la carga de malware o aplicaciones que no sean confiables cuando uno inicia el ordenador, pero también afecta sistemas operativos como GNU/Linux. 
+            <a href="https://www.xataka.com/basics/que-secure-boot-uefi-como-puedes-desactivarlo" target="_blank">Fernández, Y. (2019, 18 abril). Ver fuente</a>
+        </p>
+        <img src="i10.PNG" alt="i10">
+
+        <p>
+            <b>-Post Behavior (Power-On Self Test):</b> También llamado prueba automática de encendido es una operación que inicia una computadora encenderla, pero antes del inicio del sistema operativo. El Firmware (UEFI) realiza esta operación ejecutando una secuencia de pruebas de diagnóstico para determinar si el hardware esencial de la computadora funciona correctamente.
+        </p>
+        <p>
+            Este es esencial para la resolución de problemas en el sistema ya que el arranque completo solo se puede realizar si el software funciona correctamente, en el caso de que no la BIOS/UEFI mostrara un mensaje de error.
+            <a href="https://www-techtarget-com.translate.goog/whatis/definition/POST-Power-On-Self-Test?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc" target="_blank">Sheldon, R. (2022, 2 agosto). Ver fuente</a>
+        </p>
+        <img src="i11.PNG" alt="i11">
+
+        <p>
+            <b>- Power Managment:</b> Consiste en una opción que determina que tan agresivo se administrara energía a la CPU y se colocara en modo turbo.
+            <a href="https://pubs.lenovo.com/uefi_xeon_3rd/power.html?utm_source" target="_blank">Power | UEFI_XEON_3RD | Lenovo Docs. (s. f.). Ver fuente</a>
+        </p>
+        <img src="i12.PNG" alt="i12">
+    </div>
+
+    <div class="card">
+        <h2>MainBoard</h2>
+        
+        <p>
+            1) Buscamos una mainboard/motherboard de otra distribuidora ajena a la mayoría de laptops ya que estas no suelen publicar algún datasheet acerca de estas, lo cual ya no usaremos GPU-Z y solo buscaremos una mainboard.
+        </p>
+        <p>
+            2) La Mainboard encontrada sería <b>TUF GAMING B650EM-E WIFI</b> de ASUS, teniendo su propio apartado, con información mas visual en el “Overview” y las especificaciones mas claras como el “Tech Specs” que es como el datasheet de la página.
+        </p>
+        
+        <p>
+            Link: <a href="https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b650em-e-wifi/techspec" target="_blank">https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b650em-e-wifi/techspec</a>
+        </p>
+        <img src="i13.PNG" alt="i13">
+<img src="i14.PNG" alt="i14">
+<p>
+            3) Chipset: 
+Consiste un conjunto de componentes electrónicos que están integrados en el procesador de un dispositivo electrónico. Siendo su principal función es la de controlar el flujo de datos entre el procesador, memoria y los diferentes periféricos de un ordenador. 
+  <p>
+            Link: <a> https://www.xataka.com/basics/chipset-que-sirve</a>
+        </p>
+
+        </p>
+        <p>
+          AMD B650 Chipset
+Este chipset de gama media, está diseñado para usuarios que buscan un equilibrio entre rendimiento y precio, ofreciendo soporte para procesadores AMD Ryzen de serie 7000, 8000 y 9000. Ahora yendo a la memoria B650 esta es compatible con módulos DDR5, soportando frecuencias a base de la placa base. Este modelo se ha descontinuado y un enfoque al B850, pero eso no quiere decir que ya no estén disponibles en el mercado. 
+ <p>
+            Link: <a> https://www.tomshardware.com/pc-components/chipsets/amd-discontinues-b650-chipset-to-transition-to-the-newer-b850-chipset-affordable-am5-motherboards-just-got-a-bit-pricier  </a>
+ <p>
+            Link: <a> https://www.tomshardware.com/pc-components/motherboards/gigabyte-quietly-disables-gen5-pcie-5-0-gpu-support-on-b650-motherboards-in-f35-bios-update-stay-on-f34-if-you-value-the-unofficial-pcie-5-0-support   </a>
+
+        
+<img src="i15.PNG" alt="i15">
+-Expansion Slots/Ranuras de expansión:
+Sirven para agregar funciones o capacidades a los ordenadores. Según sus características y su construcción permiten agregar periféricos, adicionales, monitores, impresoras, etc. También capacidades como la conexión a internet, Siendo así un puerto que sirve para conectar otros dispositivos que expanden las posibilidades de la PC. 
+
+
+<p>
+ Link: <a> https://hardzone.es/noticias/perifericos/ranuras-expansion-pc </a>
+<img src="i16.PNG" alt="i16">
+<p>
+-Ethernet:
+Tecnologia para redes de datos por cable que vincula software y hardware entre sí. Para así realizar a través de claves de redes LAN, permitiendo así el intercambio de datos entre terminales
+<p>
+ Link: <a> https://www.ionos.com/es-us/digitalguide/servidores/know-how/ethernet-ieee-8023  </a>
+<p>
+1x Realtek 2.5BG Ethernet es un puerto de red Ethernet en la placa base de una un chip Realtek. La velocidad de este es de 2.5GB/s lo que implica una rápida superando el estándar de 1GB/s. Ahora el TUF LANGuard es una tecnología de ASUS que mejora la conexión de internet que combina una protección en contra de sobretensiones eléctricas y un sistema de acoplamiento de señal mejorado. 
+<p>
+<img src="i17.PNG" alt="i17">
+
+</p>
+
+
+        </p>
+
+        </p>
+<div class="card">
+        <h2>Integrantes</h2>
+
+        <p>Ariel Yumbillo, Nicolas Villacres, Andres Pesantez.</p>
+        <img src="I18.PNG" alt="i18">
+<img src="I19.PNG" alt="I19">
+<img src="i20.PNG" alt="i20">
+
+
+
+    </div>
+</body>
+</html>
